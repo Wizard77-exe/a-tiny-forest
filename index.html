@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Tiny Place</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         INTRO
+         ===================================================== -->
+
+    <main id="intro" class="screen">
+
+        <div class="stars" id="intro-stars"></div>
+
+        <div class="intro-content">
+
+            <p id="intro-text" class="intro-line hidden">
+                hey.
+            </p>
+
+            <p id="sub-text" class="intro-line hidden">
+                i made something for you.
+            </p>
+
+            <button id="open-button" class="hidden">
+                open it
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOREST
+         ===================================================== -->
+
+    <main id="world" class="screen hidden">
+
+        <!-- Moon -->
+        <div class="moon"></div>
+
+        <!-- Stars -->
+        <div class="stars" id="world-stars"></div>
+
+        <!-- Clouds -->
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
+
+
+        <!-- Mountains -->
+        <div class="mountains">
+
+            <div class="mountain mountain-one"></div>
+            <div class="mountain mountain-two"></div>
+            <div class="mountain mountain-three"></div>
+
+        </div>
+
+
+        <!-- Ground -->
+        <div class="ground"></div>
+
+
+        <!-- River -->
+        <div class="river">
+            <div class="river-shimmer"></div>
+        </div>
+
+
+        <!-- Tree -->
+        <div class="tree">
+
+            <div class="tree-top tree-top-one"></div>
+            <div class="tree-top tree-top-two"></div>
+            <div class="tree-top tree-top-three"></div>
+
+            <div class="tree-trunk"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             CAMPFIRE
+             ================================================= -->
+
+        <div class="fire">
+
+            <div class="fire-glow"></div>
+
+            <div class="flame flame-one"></div>
+            <div class="flame flame-two"></div>
+            <div class="flame flame-three"></div>
+
+            <div class="log log-one"></div>
+            <div class="log log-two"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             TWO PEOPLE
+             ================================================= -->
+
+        <div class="people">
+
+            <!-- Girl -->
+            <div class="person girl">
+
+                <div class="head"></div>
+
+                <div class="hair"></div>
+
+                <div class="body"></div>
+
+                <div class="leg leg-left"></div>
+                <div class="leg leg-right"></div>
+
+            </div>
+
+
+            <!-- Boy -->
+            <div class="person boy">
+
+                <div class="head"></div>
+
+                <div class="hair"></div>
+
+                <div class="body"></div>
+
+                <div class="leg leg-left"></div>
+                <div class="leg leg-right"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Firelight around people -->
+        <div class="people-light"></div>
+
+
+        <!-- Fireflies -->
+        <div id="fireflies"></div>
+
+
+        <!-- =================================================
+             MESSAGE
+             ================================================= -->
+
+        <div id="forest-message" class="forest-message">
+
+            <div class="message-box">
+
+                <div class="message-star">
+                    ✦
+                </div>
+
+                <div id="message-lines">
+
+                    <p class="message-line">
+                        For one particular person<br>
+                        who somehow became my bff.
+                    </p>
+
+                    <p class="message-line">
+                        I don't really know how<br>
+                        this friendship happened.
+                    </p>
+
+                    <p class="message-line">
+                        But I'm really glad it did.
+                    </p>
+
+                    <p class="message-line">
+                        So...
+                    </p>
+
+                    <p class="message-line highlight">
+                        I made you a tiny place.
+                    </p>
+
+                    <p class="message-line">
+                        You can visit whenever you want. ♡
+                    </p>
+
+                </div>
+
+                <button id="stay-button">
+                    stay a little longer
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
