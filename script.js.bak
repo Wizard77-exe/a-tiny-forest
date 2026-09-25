@@ -23,9 +23,6 @@ const forestMessage =
 const stayButton =
     document.querySelector("#stay-button");
 
-const forestMusic =
-    document.querySelector("#forestMusic");
-
 const introStars =
     document.querySelector("#intro-stars");
 
@@ -160,8 +157,7 @@ function openForest() {
     intro.style.transition =
         "opacity 2.5s ease";
 
-    intro.style.opacity =
-        "0";
+    intro.style.opacity = "0";
 
 
     setTimeout(() => {
@@ -174,8 +170,7 @@ function openForest() {
             "hidden"
         );
 
-        world.style.opacity =
-            "0";
+        world.style.opacity = "0";
 
 
         requestAnimationFrame(() => {
@@ -183,8 +178,8 @@ function openForest() {
             world.style.transition =
                 "opacity 3s ease";
 
-            world.style.opacity =
-                "1";
+            world.style.opacity = "1";
+
         });
 
 
@@ -200,53 +195,27 @@ function openForest() {
 
 function stayLonger() {
 
-    // Start completely silent.
     forestMusic.volume = 0;
 
+    forestMusic.play().then(() => {
+        let volume = 0;
 
-    // Start the music only after the user
-    // clicks "Stay a little longer".
-    forestMusic.play()
-        .then(() => {
+        const fadeIn = setInterval(() => {
+            volume += 0.01;
+            forestMusic.volume = Math.min(volume, 0.25);
 
-            let volume = 0;
-
-            const fadeIn =
-                setInterval(() => {
-
-                    volume += 0.01;
-
-                    forestMusic.volume =
-                        Math.min(
-                            volume,
-                            0.25
-                        );
+            if (volume >= 0.25) {
+                clearInterval(fadeIn);
+            }
+        }, 100);
+    });
 
 
-                    if (volume >= 0.25) {
 
-                        clearInterval(
-                            fadeIn
-                        );
-                    }
-
-                }, 100);
-
-        })
-        .catch((error) => {
-
-            console.error(
-                "Could not start forest music:",
-                error
-            );
-
-        });
-
-
-    // Let the messages disappear.
     forestMessage.classList.add(
         "fade-away"
     );
+
 }
 
 
