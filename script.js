@@ -154,21 +154,6 @@ function startIntro() {
 
 function openForest() {
 
-    forestMusic.volume = 0;
-
-    forestMusic.play().then(() => {
-        let volume = 0;
-
-        const fadeIn = setInterval(() => {
-            volume += 0.01;
-            forestMusic.volume = Math.min(volume, 0.25);
-
-            if (volume >= 0.25) {
-                clearInterval(fadeIn);
-            }
-        }, 100);
-    });
-
     intro.style.transition =
         "opacity 2.5s ease";
 
@@ -209,6 +194,23 @@ function openForest() {
 // ============================================================
 
 function stayLonger() {
+
+    forestMusic.volume = 0;
+
+    forestMusic.play().then(() => {
+        let volume = 0;
+
+        const fadeIn = setInterval(() => {
+            volume += 0.01;
+            forestMusic.volume = Math.min(volume, 0.25);
+
+            if (volume >= 0.25) {
+                clearInterval(fadeIn);
+            }
+        }, 100);
+    });
+
+
 
     forestMessage.classList.add(
         "fade-away"
